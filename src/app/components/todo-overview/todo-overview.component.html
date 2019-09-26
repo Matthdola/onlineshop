@@ -1,0 +1,15 @@
+<div id="todo" class="mt-5">
+    <div class="card">
+        <div class="card-body">
+            <h3 class="card-title">Todos App</h3>
+            <h6 class="card-subtitle mb-2 text-muted">Using Angular & Redux</h6>
+            <p class="text-right">
+                <span class="badge badge-secondary">
+            Last Update: {{ (lastUpdate | async | date: 'mediumTime')}} | Total items: {{ (todos | async).length }}
+          </span>
+            </p>
+            <button class="btn btn-primary" (click)="clearTodos()"> Delete All</button>
+        </div>
+        <app-todo-list class="mt-1 ml-3 mb-3 mr-3"></app-todo-list>
+    </div>
+</div>
